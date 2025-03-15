@@ -57,6 +57,14 @@ function playRound(humanChoice, computerChoice) {
   const round = computerScore + humanScore;
   roundResult.textContent += ` | Round (${round}/5)`;
 
+  if (roundResult.textContent.includes("won")) {
+    roundResult.className = "round-win";
+  } else if (roundResult.textContent.includes("lost")) {
+    roundResult.className = "round-loss";
+  } else {
+    roundResult.className = "round-tie";
+  }
+
   humanScoreEle.textContent = humanScore;
   computerScoreEle.textContent = computerScore;
 
@@ -73,6 +81,8 @@ function endGame() {
   computerScore = 0;
   humanScoreEle.textContent = humanScore;
   computerScoreEle.textContent = computerScore;
+  roundResult.textContent = "Select a choice";
+  roundResult.className = "";
 }
 
 rockButton.addEventListener("click", (e) => {

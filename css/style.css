@@ -40,6 +40,18 @@ body {
   gap: 20px;
 }
 
+.round-win {
+  color:rgb(5, 141, 5);
+}
+
+.round-loss {
+  color: rgb(253, 69, 36);
+}
+
+.round-tie {
+  color: rgb(29, 102, 236)
+}
+
 .buttons button {
   flex: 1;
   padding: 25px 10px;
