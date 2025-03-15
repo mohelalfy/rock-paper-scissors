@@ -27,32 +27,35 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
-    console.log("Tie");
+    roundResult.textContent = "Tie";
   } else if (humanChoice === "rock") {
     if (computerChoice === "paper") {
-      console.log("You lost, Rock beats Paper");
+      roundResult.textContent = "You lost, Rock beats Paper";
       computerScore++;
     } else {
-      console.log("You won, Rock beats Scissors");
+      roundResult.textContent = "You won, Rock beats Scissors";
       humanScore++;
     }
   } else if (humanChoice === "paper") {
     if (computerChoice === "rock") {
-      console.log("You won, Paper beats Rock");
+      roundResult.textContent = "You won, Paper beats Rock";
       humanScore++;
     } else {
-      console.log("You lost, Scissors beats Paper");
+      roundResult.textContent = "You lost, Scissors beats Paper";
       computerScore++;
     }
   } else if (humanChoice === "scissors") {
     if (computerChoice === "rock") {
-      console.log("You lost, Rock beats Scissors");
+      roundResult.textContent = "You lost, Rock beats Scissors";
       computerScore++;
     } else {
-      console.log("You won, Scissors beats Paper");
+      roundResult.textContent = "You won, Scissors beats Paper";
       humanScore++;
     }
   }
+
+  humanScoreEle.textContent = humanScore;
+  computerScoreEle.textContent = computerScore;
 }
 
 rockButton.addEventListener("click", (e) => {
