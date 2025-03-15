@@ -47,3 +47,21 @@ function playRound(humanChoice, computerChoice) {
     }
   }
 }
+
+function playGame() {
+  for (let round = 0; round < 5; round++) {
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+
+  console.log(`Human ${humanScore} | Computer ${computerScore}`);
+
+  if (humanScore > computerScore) {
+    console.log("Human won!");
+  } else if (humanScore < computerScore) {
+    console.log("Computer won!");
+  } else {
+    console.log("Tie!");
+  }
+}
+
+playGame();
