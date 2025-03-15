@@ -1,3 +1,10 @@
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+const humanScoreEle = document.querySelector("#humanScore");
+const computerScoreEle = document.querySelector("#computerScore");
+const roundResult = document.querySelector("#select-choice");
+
 function getComputerChoice() {
   const choice = Math.random();
 
