@@ -54,6 +54,9 @@ function playRound(humanChoice, computerChoice) {
     }
   }
 
+  const round = computerScore + humanScore;
+  roundResult.textContent += ` | Round (${round}/5)`;
+
   humanScoreEle.textContent = humanScore;
   computerScoreEle.textContent = computerScore;
 
