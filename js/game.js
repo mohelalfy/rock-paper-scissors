@@ -56,6 +56,20 @@ function playRound(humanChoice, computerChoice) {
 
   humanScoreEle.textContent = humanScore;
   computerScoreEle.textContent = computerScore;
+
+  if (computerScore + humanScore === 5) {
+    endGame();
+  }
+}
+
+function endGame() {
+  const didWin = humanScore > computerScore;
+  alert(`You ${didWin ? "won" : "lost"}, ${humanScore}|${computerScore}`);
+
+  humanScore = 0;
+  computerScore = 0;
+  humanScoreEle.textContent = humanScore;
+  computerScoreEle.textContent = computerScore;
 }
 
 rockButton.addEventListener("click", (e) => {
