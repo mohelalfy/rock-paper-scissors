@@ -14,3 +14,36 @@ function getHumanChoice() {
   const choice = prompt("Enter your choice: ");
   return choice.toLowerCase();
 }
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    console.log("Tie");
+  } else if (humanChoice === "rock") {
+    if (computerChoice === "paper") {
+      console.log("You lost, Rock beats Paper");
+      computerScore++;
+    } else {
+      console.log("You won, Rock beats Scissors");
+      humanScore++;
+    }
+  } else if (humanChoice === "paper") {
+    if (computerChoice === "rock") {
+      console.log("You won, Paper beats Rock");
+      humanScore++;
+    } else {
+      console.log("You lost, Scissors beats Paper");
+      computerScore++;
+    }
+  } else if (humanChoice === "scissors") {
+    if (computerChoice === "rock") {
+      console.log("You lost, Rock beats Scissors");
+      computerScore++;
+    } else {
+      console.log("You won, Scissors beats Paper");
+      humanScore++;
+    }
+  }
+}
