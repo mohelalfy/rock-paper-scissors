@@ -55,18 +55,14 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  for (let round = 0; round < 5; round++) {
-    playRound(getHumanChoice(), getComputerChoice());
-  }
+rockButton.addEventListener("click", (e) => {
+  playRound("rock", getComputerChoice());
+});
 
-  console.log(`Human ${humanScore} | Computer ${computerScore}`);
+paperButton.addEventListener("click", (e) => {
+  playRound("paper", getComputerChoice());
+});
 
-  if (humanScore > computerScore) {
-    console.log("Human won!");
-  } else if (humanScore < computerScore) {
-    console.log("Computer won!");
-  } else {
-    console.log("Tie!");
-  }
-}
+scissorsButton.addEventListener("click", (e) => {
+  playRound("scissors", getComputerChoice());
+});
